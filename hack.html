@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Courier New', monospace;
+            color: #0f0;
+            overflow: hidden;
+        }
+
+        .hacked-text {
+            font-size: 48px;
+            text-align: center;
+            text-transform: uppercase;
+            animation: glitch 1s infinite;
+            text-shadow: 0 0 10px #0f0;
+        }
+
+        .binary {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes glitch {
+            0% { transform: none; opacity: 1; }
+            7% { transform: skew(-0.5deg, -0.9deg); opacity: 0.75; }
+            10% { transform: none; opacity: 1; }
+            27% { transform: none; opacity: 1; }
+            30% { transform: skew(0.8deg, -0.1deg); opacity: 0.75; }
+            35% { transform: none; opacity: 1; }
+            52% { transform: none; opacity: 1; }
+            55% { transform: skew(-1deg, 0.2deg); opacity: 0.75; }
+            50% { transform: none; opacity: 1; }
+            72% { transform: none; opacity: 1; }
+            75% { transform: skew(0.4deg, 1deg); opacity: 0.75; }
+            80% { transform: none; opacity: 1; }
+            100% { transform: none; opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="binary" id="binary"></div>
+    <div class="hacked-text">
+        HAS SIDO HACKEADO
+    </div>
+
+    <script>
+        // Generar efecto de lluvia de código binario
+        function createBinaryRain() {
+            const binary = document.getElementById('binary');
+            setInterval(() => {
+                binary.innerText = '';
+                for(let i = 0; i < 1000; i++) {
+                    binary.innerText += Math.random() > 0.5 ? '1' : '0';
+                }
+            }, 50);
+        }
+
+        createBinaryRain();
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual - EPN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('./src/assets/fondo.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .top-bar {
+            background-color: #1a365d;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        .logo {
+            display: block;
+            width: 100px;
+            margin: 0 auto 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .remember-me {
+            margin: 10px 0;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background: #1a365d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-button:hover {
+            background: #2a4a7f;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.9);
+            color: white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>🌐 English (es)</span>
+        <span>Preguntas Frecuentes</span>
+    </div>
+
+    <div class="login-container">
+        <img src="./src/assets/Logo.svg" alt="Logo EPN" class="logo">
+        <form action="hack.html" method="GET">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember username</label>
+            </div>
+            <button type="submit" class="login-button">Log in</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <span>asistencia.tecnica@epn.edu.ec</span>
+            <span>(+593) 2 2976 300 ext 1402 / 1404</span>
+            <span>Escuela Politécnica Nacional ©Todos los Derechos Reservados 2024</span>
+        </div>
+    </footer>
+</body>
+</html>
